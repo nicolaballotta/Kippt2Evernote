@@ -40,7 +40,7 @@ if import_notebook == "":
 # service, change sandbox=False and replace your
 # developer token above with a token from
 # https://www.evernote.com/api/DeveloperToken.action
-client = EvernoteClient(token=auth_token, sandbox=False)
+client = EvernoteClient(token=auth_token, sandbox=True)
 
 user_store = client.get_user_store()
 
@@ -82,7 +82,7 @@ for bookmark in range(len(link_list)):
 
     created_note = note_store.createNote(note)
 
-    print "[*] Successfully created a new note with GUID: ", created_note.title
+    print "[*] Successfully created a new note with title: ", created_note.title
 
 
 
